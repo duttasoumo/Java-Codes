@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="i" key="selection"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="true" key="wholeword"/>
+		<list key="findhistory">
+			<item value="0"/>
+			<item value="name=&quot;size&quot;"/>
+			<item value="id=&quot;*&quot;"/>
+			<item value="&lt;input type=&quot;radio&quot;"/>
+			<item value="&lt;input type=&quot;radio&quot; value=&quot;0&quot; id=&quot;0&quot; name=&quot;size&quot;/&gt;"/>
+			<item value="select name"/>
+			<item value="colspan=&quot;2&quot;"/>
+			<item value="input[name="/>
+		</list>
+		<list key="replacehistory">
+			<item value="i"/>
+			<item value=""/>
+			<item value="&lt;option"/>
+			<item value="select name"/>
+			<item value="#"/>
+			<item value="&apos;"/>
+			<item value="&quot;"/>
+			<item value="harvesting"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="405" key="DIALOG_HEIGHT"/>
+		<item value="1079" key="DIALOG_X_ORIGIN"/>
+		<item value="110" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

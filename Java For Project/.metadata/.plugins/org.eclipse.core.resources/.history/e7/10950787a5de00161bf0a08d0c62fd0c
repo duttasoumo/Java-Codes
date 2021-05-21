@@ -1,0 +1,23 @@
+package tableL2;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class ViewL2 {
+
+	public static boolean isL2(String x) throws SQLException {
+		// TODO Auto-generated method stub
+		Connection con=connection_MySQL.ConnectionClass.dbcon();
+		String sql="select * from l1 where item=?";
+		ResultSet rs=null;
+		PreparedStatement state=con.prepareStatement(sql);
+		state.setString(1,x);
+		rs=state.executeQuery();
+		boolean val=rs.next();
+		con.close();
+		return val;
+	}
+
+}

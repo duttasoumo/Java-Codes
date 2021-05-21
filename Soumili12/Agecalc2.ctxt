@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ main()
+comment1.params=y
+comment1.target=int\ countDigi(int)
+comment2.params=y
+comment2.target=boolean\ isLeap(int)
+numComments=3

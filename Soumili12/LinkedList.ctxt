@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=LinkedList()
+comment1.params=
+comment1.target=void\ print()
+comment2.params=d
+comment2.target=void\ addfirst(int)
+comment3.params=d
+comment3.target=void\ addlast(int)
+comment4.params=
+comment4.target=int\ count()
+comment5.params=d\ p
+comment5.target=void\ addmiddle(int,\ int)
+comment6.params=
+comment6.target=void\ delfirst()
+comment7.params=
+comment7.target=void\ dellast()
+comment8.params=p
+comment8.target=void\ delmiddle(int)
+comment9.params=
+comment9.target=void\ main()
+numComments=10

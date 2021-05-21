@@ -1,0 +1,43 @@
+/*floatinglable.css*/        
+	        .group {
+            position: relative;
+        }
+        
+        .inputMaterial {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            font-size: 16px;
+            height: auto;
+            margin: 0;
+            outline: 0;
+            padding: 15px;
+            background-color: #e8eeef;
+            color: #8a97a0;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+            margin-top: 30px;
+        }
+        
+        .inputMaterial:focus {
+            outline: none;
+        }
+        /* LABEL ======================================= */
+        
+        .floating {
+            color: #999;
+            font-size: 14px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+        /* active state */
+        
+        .inputMaterial:focus~.floating, .inputMaterial:not(:placeholder-shown)~.floating {
+            top: -20px;
+            font-size: 14px;
+            color: #009688;
+        }

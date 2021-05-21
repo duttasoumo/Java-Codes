@@ -1,0 +1,7 @@
+127.0.0.1 - - [18/Feb/2017:00:46:26 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [18/Feb/2017:00:46:28 +0530] "GET /TrailProject/log.jsp HTTP/1.0" 200 381
+0:0:0:0:0:0:0:1 - - [18/Feb/2017:00:47:34 +0530] "GET /TrailProject/log.jsp HTTP/1.0" 200 423
+0:0:0:0:0:0:0:1 - - [18/Feb/2017:00:49:02 +0530] "GET /TrailProject/log.jsp HTTP/1.0" 200 448
+0:0:0:0:0:0:0:1 - - [18/Feb/2017:00:49:11 +0530] "GET /TrailProject/Log?id=admin&pass=admin HTTP/1.0" 200 329
+0:0:0:0:0:0:0:1 - - [18/Feb/2017:00:50:12 +0530] "GET /TrailProject/log.jsp HTTP/1.0" 200 448
+0:0:0:0:0:0:0:1 - - [18/Feb/2017:00:50:19 +0530] "GET /TrailProject/Log?id=roti&pass=dsokv HTTP/1.0" 200 448

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;ServoracleExtensionClass&apos; to &apos;serveletClass.oracleExtensionClass&apos;&#x0D;&#x0A;- Original project: &apos;OracelExtension&apos;&#x0D;&#x0A;- Original element: &apos;OracelExtension/src/ServoracleExtensionClass&apos;&#x0D;&#x0A;- Renamed element: &apos;OracelExtension/src/serveletClass.oracleExtensionClass&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings&#x0D;&#x0A;- Rename subpackages of the package" description="Rename package &apos;ServoracleExtensionClass&apos;" flags="589830" hierarchical="true" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;ServoracleExtensionClass" name="serveletClass.oracleExtensionClass" qualified="false" references="true" stamp="1483817694262" textual="false" version="1.0"/>
+</session>

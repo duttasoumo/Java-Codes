@@ -1,0 +1,7 @@
+create table table1(
+roll number primary key,
+name varchar(10),
+Marks number );
+ insert into table1 values(513,'Soumo',56);
+insert into table1 values(572,'Noor',86);
+insert into table1 values(512,'Utteya',96);

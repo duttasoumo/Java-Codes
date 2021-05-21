@@ -1,0 +1,27 @@
+package transactionTable;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class TransactionClass {
+	
+	static int transaction(String I)
+	 {  
+		Connection con=connection_MySQL.ConnectionClass.dbcon();
+		int t=0;
+		 try{
+		 String T="T";
+		 Statement smt=con.createStatement();
+		 ResultSet rs=smt.executeQuery("Select Count(*) from transaction;");
+		 rs.next();
+		  t=rs.getInt(1)+1;
+			T+=Integer.toString(t++);
+			smt.execute("Insert into transaction (TID,Item_List) values ('"+T+"' , '"+I+"');");
+		 }
+		 catch(Exception e)
+		 {	System.out.println(e.getMessage());}
+		 return t;
+	 }
+
+}

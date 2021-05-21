@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AgeCalc()
+comment1.params=bd\ cd
+comment1.target=void\ input(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ calc()
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

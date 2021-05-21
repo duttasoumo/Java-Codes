@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Point()
+comment1.params=p
+comment1.target=float\ calcSlope(Point)
+comment2.params=
+comment2.target=void\ acceptFirst()
+comment3.params=p\ q
+comment3.target=Point\ midPoint(Point,\ Point)
+comment4.params=
+comment4.target=void\ display()
+comment5.params=
+comment5.target=void\ main()
+numComments=6

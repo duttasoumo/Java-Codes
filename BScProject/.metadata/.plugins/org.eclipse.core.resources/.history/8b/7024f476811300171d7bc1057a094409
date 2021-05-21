@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<head>
+<title>ItemPage</title>
+</head>
+<body>
+<form action="itemSelect" id='formName'>
+<table style="text-align:center;border-spacing:10;" border="12dp" align="center">
+<tr>
+<td><input type="image" onclick="document.forms['formName'].submit();" src="images/catcher-in-the-rye.jpeg" name="but" width="60" height="60" value="1"><br>"Catcher In The Rye"<br>1</td>
+<td><input type="image" alt="Submit" src="images/diary.jpeg" name="but" width="60" height="60"  value="2"><br>"The Diary of a Wimpy Kid"<br>2</td>
+<td><input type="image" alt="Submit" src="images/greatexpectations.jpeg" name="but" width="60" height="60"  value="3"><br>"Great Expectations"<br>3</td>
+<td><input type="image" alt="Submit" src="images/iceage.jpg" name="but" width="60" height="60"  value="4"><br>"Ice Age: The Meltdown"<br>4</td>
+<td><input type="image" alt="Submit" src="images/janeeyre.jpeg" name="but" width="60" height="60"  value="5"><br>"Jane Eyre"<br>5</td>
+</tr>
+<tr>
+<td><input type="image" alt="Submit" src="images/junglebook.jpeg" name="but" width="60" height="60"  value="6"><br>"Jungle Book"<br>6</td>
+<td><input type="image" alt="Submit" src="images/mockingbird.jpeg" name="but" width="60" height="60"  value="7"><br>"To Kill a Mocking Bird"<br>7</td>
+<td><input type="image" alt="Submit" src="images/one-indian-girl-original.jpeg" name="but" width="60" height="60"  value="8"><br>"One Indian Girl"<br>8</td>
+<td><input type="image" alt="Submit" src="images/Pokemon.jpg" name="but" width="60" height="60"  value="9"><br>"Pokemon"<br>9</td>
+<td><input type="image" alt="Submit" src="images/prideandprejudice.jpeg" name="but" width="60" height="60"   value="10"><br>"Pride and Prejudice"<br>10</td>
+</tr>
+<tr>
+<td><input type="image" alt="Submit" src="images/sourcecode.jpeg" name="but" width="60" height="60"  value="11"><br>"Source Code"<br>11</td>
+<td><input type="image" alt="Submit" src="images/tangled.jpg" name="but" width="60" height="60"  value="12"><br>"Tangled"<br>12</td>
+<td><input type="image" alt="Submit" src="images/thegreatgatsby.jpeg" name="but" width="60" height="60"  value="13"><br>"The Great Gatsby"<br>13</td>
+<td><input type="image" alt="Submit" src="images/The-Tenant-of-the-World.jpg" name="but" width="60" height="60"  value="14"><br>"The Tenant of the World"<br>14</td>
+<td><input type="image" alt="Submit" src="images/tintin.jpeg" name="but" width="60" height="60"  value="15"><br>"Tintin and the Picaros"<br>15</td>
+</tr>
+<tr>
+<td><input type="image" alt="Submit" src="images/oliver_twist.jpeg" name="but" width="60" height="60"  value="16"><br>"Oliver Twist"<br>16</td>
+<td><input type="image" alt="Submit" src="images/mansfield-park.jpeg" name="but" width="60" height="60"  value="17"><br>"Mansfield Park"<br>17</td>
+<td><input type="image" alt="Submit" src="images/sense-and-sensibility.jpeg" name="but" width="60" height="60"  value="18"><br>"Sense and Sensibility"<br>18</td>
+<td><input type="image" alt="Submit" src="images/wuthering.jpeg" name="but" width="60" height="60"  value="19"><br>"Wuthering Heights"<br>19</td>
+<td><input type="image" alt="Submit" src="images/emma.jpeg" name="but" width="60" height="60"  value="20"><br>"Emma"<br>20</td>
+</tr>
+<tr>
+<td><input type="image" alt="Submit" src="images/riverpiedra.jpeg" name="but" width="60" height="60"  value="21"><br>"By the River Piedra I Sat Down and Wept"<br>21</td>
+<td><input type="image" alt="Submit" src="images/alchemist.jpeg" name="but" width="60" height="60"  value="22"><br>"The Alchemist"<br>22</td>
+<td><input type="image" alt="Submit" src="images/zahir.jpeg" name="but" width="60" height="60"  value="23"><br>"The Zahir"<br>23</td>
+<td><input type="image" alt="Submit" src="images/the glass palace.jpeg" name="but" width="60" height="60"  value="24"><br>"The Glass Palace"<br>24</td>
+<td><input type="image" alt="Submit" src="images/hunchback.jpg" name="but" width="60" height="60"  value="25"><br>"The Hunchback of Notro Dame"<br>25</td>
+</tr>
+<tr>
+<td><input type="image" alt="Submit" src="images/nograves.jpeg" name="but" width="60" height="60"  value="26"><br>"No Graves as Yet"<br>26</td>
+<td><input type="image" alt="Submit" src="images/lowland.jpeg" name="but" width="60" height="60"  value="27"><br>"The Lowland"<br>27</td>
+<td><input type="image" alt="Submit" src="images/namesake.jpg" name="but" width="60" height="60"  value="28"><br>"The Namesake"<br>28</td>
+<td><input type="image" alt="Submit" src="images/frankenstein.jpeg" name="but" width="60" height="60"  value="29"><br>"Frankenstein"<br>29</td>
+<td><input type="image" alt="Submit" src="images/the calcutta.jpeg" name="but" width="60" height="60"  value="30"><br>"The Calcutta Chromosome"<br>30</td>
+</tr>
+
+
+
+
+<tr>
+<td><input type="image" alt="Submit" src="images/huckelberryfin.jpeg" name="but" width="60" height="60"  value="31"><br>"The Adventures of Huckelberry Fin"<br>31</td>
+<td><input type="image" alt="Submit" src="images/train.jpg" name="but" width="60" height="60" value="1" value="32"><br>"Train To Pakistan"<br>32</td>
+<td><input type="image" alt="Submit" src="images/two_little_girls.jpeg" name="but" width="60" height="60" value="33"><br>"Two Little Girls in Blue"<br>33</td>
+<td><input type="image" alt="Submit" src="images/outbreak.jpeg" name="but" width="60" height="60"  value="34"><br>"Outbreak"<br>34</td>
+<td><input type="image" alt="Submit" src="images/the snow child.jpeg" name="but" width="60" height="60" value="35"><br>"The Snow Child"<br>35</td>
+</tr>
+<tr>
+<td><input type="image" alt="Submit" src="images/Midnight's Children.jpeg" name="but" width="60" height="60" value="36"><br>"Midnight's Children"<br>36</td>
+<td><input type="image" alt="Submit" src="images/HP1.jpg" name="but" width="60" height="60"  value="37"><br>"Harry Potter and The Philosopher's Stone"<br>37</td>
+<td><input type="image" alt="Submit" src="images/HP2.jpg" name="but" width="60" height="60"  value="38"><br>"Harry Potter and The Chamber of Secrets"<br>38</td>
+<td><input type="image" alt="Submit" src="images/HP3.jpg" name="but" width="60" height="60"  value="39"><br>"Harry Potter and the Prisoner of Askaban"<br>39</td>
+<td><input type="image" alt="Submit" src="images/HP4.jpg" name="but" width="60" height="60"  value="40"><br>"Harry Potter and the Goblet of Fire"<br>40</td>
+</tr>
+<tr>
+<td><input type="image" alt="Submit" src="images/HP5.jpg" name="but" width="60" height="60"  value="41"><br>"Harry Potter and The Order of The Phoniex "<br>41</td>
+<td><input type="image" alt="Submit" src="images/HP6.jpeg" name="but" width="60" height="60"  value="42"><br>"Harry Potter and the Half Blood Prince"<br>42</td>
+<td><input type="image" alt="Submit" src="images/HP7.jpg" name="but" width="60" height="60"  value="43"><br>"Harry Potter and the Deathly Hallows"<br>43</td>
+<td><input type="image" alt="Submit" src="images/da vinci code.jpeg" name="but" width="60" height="60"  value="44"><br>"Da Vinci Code"<br>44</td>
+<td><input type="image" alt="Submit" src="images/angels and demons.jpeg" name="but" width="60" height="60"  value="45"><br>"Angels and Demons"<br>45</td>
+</tr>
+
+
+<tr>
+<td><input type="image" alt="Submit" src="images/digitalfortress.jpeg" name="but" width="60" height="60"  value="46"><br>"Digital Fortress"<br>46</td>
+<td><input type="image" alt="Submit" src="images/inferno.jpeg" name="but" width="60" height="60"  value="47"><br>"Inferno"<br>47</td>
+<td><input type="image" alt="Submit" src="images/mountains.jpeg" name="but" width="60" height="60"  value="48"><br>"And The Mountains Echoed "<br>48</td>
+<td><input type="image" alt="Submit" src="images/thekiterunner.jpeg" name="but" width="60" height="60"  value="49"><br>"The Kite Runner"<br>49</td>
+<td><input type="image" alt="Submit" src="images/thousand.jpeg" name="but" value="50" width="60" height="60"  value="50"><br>"Thousand Splendid Suns"<br>50</td>
+</tr>
+</table>
+</form>
+</body>
+
+</html>

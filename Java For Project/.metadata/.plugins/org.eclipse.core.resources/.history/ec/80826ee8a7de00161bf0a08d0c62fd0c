@@ -1,0 +1,30 @@
+package driverModule;
+
+import java.sql.SQLException;
+
+import tableL1.TableC1;
+import tableL1.ViewL1;
+import tableL2.TableH2;
+import tableL3.TableH3;
+
+class MainClass {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+		TableC1 ob=new TableC1();
+		int x=ob.insert("1,2,6,8");
+		System.out.println(x);
+		
+		ViewL1 ob2=new ViewL1();
+		x=ob2.insert(3);
+		System.out.println(x);
+		
+		TableH2 ob3=new TableH2();
+		x=ob3.insert("1,2,6,8");
+		
+		TableH3 ob4=new TableH3();
+		x=ob4.insert("1,2,6,8");
+		
+		}
+
+}

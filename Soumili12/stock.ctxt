@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=ni\ nqty\ nrate
+comment0.target=stock(java.lang.String,\ int,\ double)
+comment1.params=
+comment1.target=void\ display()
+numComments=2

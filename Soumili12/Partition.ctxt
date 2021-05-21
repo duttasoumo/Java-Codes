@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=n
+comment0.target=void\ partition(int)
+comment1.params=n\ max\ prefix
+comment1.target=void\ partition(int,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=void\ main()
+numComments=3

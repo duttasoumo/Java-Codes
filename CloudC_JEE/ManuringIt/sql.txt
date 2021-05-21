@@ -1,0 +1,93 @@
+CREATE DATABASE `manuringit` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE TABLE `crop` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cropid_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `custinfo` (
+  `cid` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `aid` varchar(12) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `sex` varchar(1) DEFAULT 'M',
+  `village` varchar(30) DEFAULT '""',
+  `block` varchar(30) DEFAULT '""',
+  `dist` varchar(30) DEFAULT '""',
+  `city` varchar(30) DEFAULT '""',
+  `state` varchar(30) DEFAULT '""',
+  `size` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`cid`),
+  UNIQUE KEY `cid_UNIQUE` (`cid`),
+  UNIQUE KEY `aid_UNIQUE` (`aid`)
+) ENGINE=InnoDB AUTO_INCREMENT=10000020 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `farminput` (
+  `cid` int(11) unsigned NOT NULL,
+  `pesticide` int(11) DEFAULT '0',
+  `fertilizer` varchar(15) DEFAULT '""',
+  `fertiquant` int(11) DEFAULT '0',
+  `manure` int(11) DEFAULT '0',
+  `tools` tinyint(2) unsigned zerofill DEFAULT '00',
+  `price` float unsigned NOT NULL DEFAULT '0',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `sowing` tinyint(2) DEFAULT '0',
+  `harvesting` tinyint(2) DEFAULT '0',
+  PRIMARY KEY (`cid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `kharifcombi` (
+  `cid` int(10) unsigned NOT NULL,
+  `sowing` tinyint(2) DEFAULT '0',
+  `harvesting` tinyint(2) DEFAULT '0',
+  `crop1` tinyint(3) unsigned DEFAULT '0',
+  `crop2` tinyint(3) unsigned DEFAULT '0',
+  `crop3` tinyint(3) unsigned DEFAULT '0',
+  PRIMARY KEY (`cid`),
+  UNIQUE KEY `cid_UNIQUE` (`cid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `rabicombi` (
+  `cid` int(10) unsigned NOT NULL,
+  `sowing` tinyint(2) DEFAULT '0',
+  `harvesting` tinyint(2) DEFAULT '0',
+  `crop1` tinyint(3) unsigned DEFAULT '0',
+  `crop2` tinyint(3) unsigned DEFAULT '0',
+  `crop3` tinyint(3) unsigned DEFAULT '0',
+  PRIMARY KEY (`cid`),
+  UNIQUE KEY `cid_UNIQUE` (`cid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `sales` (
+  `cid` int(11) unsigned NOT NULL,
+  `sub` tinyint(1) unsigned zerofill DEFAULT '0',
+  `payment` tinyint(1) unsigned zerofill DEFAULT '0',
+  `amount` float unsigned zerofill DEFAULT '000000000000',
+  `payDate` datetime DEFAULT NULL,
+  PRIMARY KEY (`cid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `summercombi` (
+  `cid` int(10) unsigned NOT NULL,
+  `sowing` tinyint(2) DEFAULT '0',
+  `harvesting` tinyint(2) DEFAULT '0',
+  `crop1` tinyint(3) unsigned DEFAULT '0',
+  `crop2` tinyint(3) unsigned DEFAULT '0',
+  `crop3` tinyint(3) unsigned DEFAULT '0',
+  PRIMARY KEY (`cid`),
+  UNIQUE KEY `cid_UNIQUE` (`cid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `tools` (
+  `id` tinyint(2) NOT NULL AUTO_INCREMENT,
+  `name` varchar(15) NOT NULL DEFAULT '""',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `user_login` (
+  `user` varchar(6) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  `login` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

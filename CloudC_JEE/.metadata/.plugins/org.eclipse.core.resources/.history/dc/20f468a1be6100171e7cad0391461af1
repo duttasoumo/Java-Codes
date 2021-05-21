@@ -1,0 +1,188 @@
+<%@page import="java.util.LinkedList"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <head>
+        <meta charset="utf-8">
+        <link href="css/form.css" rel="stylesheet" type="text/css"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <style>
+               @media screen and (min-width: 480px) {
+            form {
+                max-width: 640px;
+            }
+        }
+        
+        
+    </style>
+        <script>
+        function saveForm() {
+        	if(typeof window.sessionStorage ==="undefined"){return;alert("NO storage!!")}
+        	saveValues("input");
+        	window.sessionStorage.setItem("gender",document.getElementsByName("gender")[0].checked? 'M' : 'F');
+        	
+        }
+
+        	function loadForm() {
+        	//nothing to work with, get out of here
+        	if(typeof window.sessionStorage ==="undefined"){return;}
+        	setValues("input");
+        	var gen=window.sessionStorage.getItem("gender");
+	        if(gen) document.getElementById(gen).checked=true;
+        	}
+
+
+        	function saveValues(tag){
+        	var inputs=document.getElementsByTagName(tag);
+        	for(var i=0;i<inputs.length;i++){
+        	window.sessionStorage.setItem(inputs[i].name, inputs[i].value);
+        	}
+        	}
+
+        	function setValues(tag){
+        	var inputs=document.getElementsByTagName(tag);
+        	for(var i=0;i<inputs.length;i++){
+        	inputs[i].value = window.sessionStorage.getItem(inputs[i].name);
+        	}
+        	}
+
+
+            window.onload = function () {
+        	var state = document.getElementById("state");
+            var dist=document.getElementById("dist");
+        	var city=document.getElementById("city");
+        
+            <% LinkedList<String> ar=(LinkedList<String>)session.getAttribute("stateList"); 
+           	  for(String x:ar)
+                out.write("state.options[state.options.length] = new Option(\""+x+"\",\""+x+"\");");
+           	
+           	String s = request.getParameter("sid");
+           	if(s!=null){
+           		%>
+           		city.focus();
+           		loadForm();
+           		sessionStorage.clear();
+           		<%
+					int sid=Integer.parseInt(s);
+           			LinkedList<String> distList[]=(LinkedList<String> [])session.getAttribute("distList");
+           			for(String x:distList[sid-1])
+                        out.write("dist.options[dist.options.length] = new Option(\""+x+"\",\""+x+"\");");
+           			LinkedList<String> cityList[]=(LinkedList<String> [])session.getAttribute("cityList");
+           			for(String x:cityList[sid-1])
+                        out.write("city.options[city.options.length] = new Option(\""+x+"\",\""+x+"\");");
+           			out.print("document.getElementById(\"state\").selectedIndex="+s);
+           		}
+           		%>
+            }  
+        
+        function myFunction(){
+
+			saveForm();	
+        	var form = document.createElement("form");
+            var element1 = document.createElement("input"); 
+
+            form.method = "POST";
+            form.action = "reg.jsp";   
+
+            element1.value=document.getElementById("state").selectedIndex;
+            element1.name="sid";
+            form.appendChild(element1);  
+            
+            document.body.appendChild(form);
+
+            form.submit();
+            
+        	}
+        
+        function aadhar(){
+        	var x=Number(document.getElementById("aid").value);
+        	if(x!=0)
+        	if(!(x>100000000000 && x<999999999999)){
+        		document.getElementById("aid").value="";
+        		document.getElementById("aid").focus();
+        		alert(x+" is INVALID Aadhar ID");
+        	}
+        }
+        
+        function phone(){
+        	var x=Number(document.getElementById("phno").value);
+        	if(x!=0)
+        	if(!(x>6000000000 && x<9999999999)){
+        		document.getElementById("phno").value="";
+        		document.getElementById("phno").focus();
+        		alert(x+" is INVALID Phone Number");
+        	}
+        }
+        </script>
+    </head>
+
+    <body>
+
+        <form method="post" action="Reg">
+
+            <h1>Sign Up</h1>
+
+            <fieldset>
+                <legend><span class="number">1</span>Customer basic info</legend>
+                <label for="name">Name:</label><input type="text" id="name" name="name" required>
+				
+				<label>Gender:</label>
+                <input type="radio" value="M" name="gender" id="M"><label for="Male" class="light" checked="checked" >Male</label><br>
+                <input type="radio" value="F" name="gender" id="F"><label for="Female" class="light" >Female</label><br>
+            
+                <label for="cutomerID">Customer ID:</label>
+                <input type="text" id="cid" name="cid" value="<%=session.getAttribute("cid") %>" readonly>
+                
+                <label for="aadhar">Aadhar ID:</label>
+                <input type="text" id="aid" name="aid" onfocusout="aadhar()">
+                
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phno" name="phno" onfocusout="phone()">
+                
+                </fieldset>
+
+            	<fieldset>
+                <legend><span class="number">2</span>Customer Address info</legend>
+                
+                <label for="state">State:</label>
+                <select name="s" id="state" onchange="myFunction()">
+                <option value="" selected="selected" required>Select State</option>
+                </select>
+                
+                <label for="city">City:</label>
+                <select name="c" id="city">
+                <option value="" selected="selected">Select City</option>
+                </select>
+                
+                <label for="dist">District:</label>
+                <select name="d" id="dist" required>
+                <option value="" selected="selected" >Select District</option>
+                </select>
+                
+                <label for="Block">Block:</label>
+                <input type="text" name="block">
+                
+                <label for="Village">Village:</label>
+                <input type="text" name="village" >
+                
+                </fieldset>
+
+            <fieldset>
+                <legend><span class="number">3</span>Customer profile</legend>
+                <label for ="bio">Size of Land:</label>
+                <input type="radio" value="1" name="size" ><label class="light" >0.1-0.2</label><br>
+                <input type="radio" value="2" name="size" ><label class="light" >0.2-0.4</label><br>
+                <input type="radio" value="3" name="size" ><label class="light" >0.4-0.6</label><br>
+                <input type="radio" value="4" name="size" ><label class="light" >0.6-0.8</label><br>
+                <input type="radio" value="5" name="size" ><label class="light" >0.8-1.0</label><br>
+                <input type="radio" value="6" name="size" ><label class="light" >1.0-2.0</label><br>
+                <input type="radio" value="7" name="size" ><label class="light" >2.0 and above</label><br>
+            
+            </fieldset>
+            <input type="submit" value="Submit"/>
+            </form>
+
+    </body>
+
+    </html>

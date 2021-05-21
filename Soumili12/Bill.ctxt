@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=n2\ n1\ a2\ t2\ r2
+comment0.target=Bill(int,\ java.lang.String,\ java.lang.String,\ long,\ double)
+comment1.params=
+comment1.target=void\ cal()
+comment2.params=
+comment2.target=void\ show()
+comment3.params=n1\ n2\ a2\ t2\ r2
+comment3.target=void\ main(java.lang.String,\ int,\ java.lang.String,\ long,\ double)
+numComments=4
